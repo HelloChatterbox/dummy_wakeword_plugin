@@ -15,19 +15,24 @@ from mycroft.client.speech.hotword_factory import HotWordEngine
 
 class DummyWakeWordPlugin(HotWordEngine):
     """Dummy Wake Word, only button presses trigger listening"""
+
     def __init__(self, hotword="dummy", config=None, lang="en-us"):
         super(DummyWakeWordPlugin, self).__init__(hotword, config or {}, lang)
 
     def found_wake_word(self, frame_data):
+        """ frame data contains audio data that needs to be checked for a wake
+        word, you can process audio here or just return a result
+        previously handled in update method """
         return False
 
     def update(self, chunk):
-        pass
+        """ In here you have access to live audio chunks, allows for
+        streaming predictions, result still need to be returned in
+        found_wake_word method """
 
     def stop(self):
         """ Perform any actions needed to shut down the hot word engine.
 
             This may include things such as unload loaded data or shutdown
-            external processess.
+            external processes.
         """
-        pass
