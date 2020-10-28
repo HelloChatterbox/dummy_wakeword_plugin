@@ -7,11 +7,14 @@ Wake-word group: "mycroft.plugin.wake_word"
 
 more info in the [original PR](https://github.com/MycroftAI/mycroft-core/pull/2594)
 
+
 ## How to test
 
 `mycroft-pip install git+https://github.com/HelloChatterbox/dummy_wakeword_plugin`
 
-Then set the wake_word module to 'dummy_ww_plug` assert that mycroft does not answer to wake word
+Then configure a wake_word with module to 'dummy_ww_plug`, assert that mycroft does not answer to wake word
+
+NOTE: wakeword config is ignored and wake word name (or other fields) do not matter, you only need an entry with module set to "dummy_ww_plug"
 
 ## Use cases
 
