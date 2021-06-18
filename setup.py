@@ -5,13 +5,14 @@ from setuptools import setup
 PLUGIN_ENTRY_POINT = 'dummy_ww_plug=chatterbox_wake_word_plugin_dummy:DummyWakeWordPlugin'
 setup(
     name='chatterbox-wake-word-plugin-dummy',
-    version='0.1',
+    version='0.1.1',
     description='A wake word plugin for mycroft',
     url='https://github.com/HelloChatterbox/dummy_wakeword_plugin',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     packages=['chatterbox_wake_word_plugin_dummy'],
+    install_requires=["ovos-plugin-manager>=0.0.1a3"],
     zip_safe=True,
     classifiers=[
         'Development Status :: 3 - Alpha',

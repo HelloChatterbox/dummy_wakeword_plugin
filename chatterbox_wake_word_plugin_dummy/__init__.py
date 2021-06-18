@@ -10,7 +10,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from mycroft.client.speech.hotword_factory import HotWordEngine
+from ovos_plugin_manager.templates.hotwords import HotWordEngine
 
 
 class DummyWakeWordPlugin(HotWordEngine):
